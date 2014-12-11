@@ -23,7 +23,7 @@ yelp.search({term: "post lofts", location: "77002",limit:1}, function(error, dat
 })
 });
 
-// Seebbb http://www.yelp.com/developers/documentation/v2/business
+// See http://www.yelp.com/developers/documentation/v2/business
 //yelp.business("north-post-oak-lofts-houston", function(error, data) {
 //  console.log("Yelp Business Details .............");
 //  console.log(error);
