@@ -16,7 +16,7 @@ yelp.search({term: "post lofts", location: "77002",limit:1}, function(error, dat
   console.log(data.businesses[0].id);
   yelp_id = data.businesses[0].id;
   console.log(yelp_id);
-  yelp.business("north-post-oak-lofts-houston", function(error, data) {
+  yelp.business(yelp_id, function(error, data) {
     console.log("Yelp Business Details .............");
     console.log(error);
     console.log(data);
