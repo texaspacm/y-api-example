@@ -1,5 +1,5 @@
 var yelp = require("yelp").createClient({
-  consumer_key: "KnkwP8iOsUjL94sfc26EmQ", 
+  consumer_key: "KnkwP8iOsUjL94sfc26EmQ",
   consumer_secret: "sJT04HnKl5KtKVsUADpayA8l3OA",
   token: "uYQu8lmU2RokAXkZebKDQvzLsHLpUelu",
   token_secret: "oCBjq7_ADREJXeTZnrj5PLBkKao"
@@ -7,10 +7,10 @@ var yelp = require("yelp").createClient({
 var yelp_id;
 
 // See http://www.yelp.com/developers/documentation/v2/search_api
-yelp.search({term: "post lofts", location: "77002",limit:1}, function(error, data) {
+yelp.search({term: "Camden City Centre", location: "77002",limit:1}, function(error, data) {
   console.log("Yelp Search ...........");
-  console.log(error);
-  console.log(data);
+  console.log("Error: " + error);
+  //console.log(data);
   console.log("-----------");
   console.log(data.businesses[0].name);
   console.log(data.businesses[0].id);

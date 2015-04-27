@@ -1,0 +1,74 @@
+We do not have to do this now, but I need you to plan for adding more data to our "apartments" schema.
+
+Right now, the schema is all about the Google+ Data.  However, we need to plan for inserting & updating data from Yelp, Instagram, and Facebook.
+
+What do you think is the best way to add Yelp, Instagram and Facebook data to the Schema?
+
+I was thinking we just embed another document into our current Schema.
+(i will BOLD the new data)
+
+{
+  _id: ObjectId("54aa1421786a200b0038ce01"),
+  position: [ -104.993134, 39.744766],
+  mylineup_count: 1,
+  total_reviews: 3,
+  reviews: [ ... ],
+  opening_hours: [ ... ],
+  gplus: "https://plus.google.com/115196152446305495951/about?hl=en-US",
+  zipcode: "80202",
+  country: "United States",
+  state: "CO",
+  city: "Denver",
+  website: "http://www.boutiqueapartments.com/",
+  mobpicture: "...",
+  thumbpicture: "...",
+  mediumpicture: "...",
+  smallpicture: "...",
+  picture: "...",
+  lng: "-104.993134",
+  lat: "39.744766",
+  place_id: "ChIJx1zNIdF4bIcRc6eHAsC0zyA",
+  address: "1555 California Street #301",
+  apart_name: "Denver Building Housing",
+  lastupdates: ISODate("2015-01-05T04:33:37.924Z"),
+  created: ISODate("2015-01-05T04:33:37.924Z"),
+  yelp: {
+    is_claimed: true,
+    rating: 3.5,
+    mobile_url: '...',
+    rating_img_url: '...',
+    review_count: 28,
+    name: 'Camden City Centre',
+    snippet_image_url: '...',
+    rating_img_url_small: '...',
+    url: '...',
+    reviews:
+      [ { rating: 4,
+       excerpt: 'I\'ve lived here for a year and have nothing bad to say regarding the management, as they\'ve always been there when I\'ve need, they\'ve helped me out in...',
+       time_created: 1426182509,
+       rating_image_url: '...',
+       rating_image_small_url: '...',
+       user: [Object],
+       rating_image_large_url: '...',
+       id: 'InnOjMp93DaUAZj_srpv-w' } ],
+       phone: '8665025745',
+       snippet_text: 'I\'ve lived here for a year and have nothing bad to say regarding the management, as they\'ve always been there when I\'ve need, they\'ve helped me out in...',
+       image_url: 'http://s3-media4.fl.yelpcdn.com/bphoto/Il7AkE8_cHGU5fzX_X_WmA/ms.jpg',
+       categories: [ [ 'Apartments', 'apartments' ] ],
+       display_phone: '+1-866-502-5745',
+       rating_img_url_large: '...',
+       id: 'camden-city-centre-houston',
+       is_closed: false,
+       location:
+       { city: 'Houston',
+         display_address: [ '301 St. Josephs Parkway', 'Midtown', 'Houston, TX 77002' ],
+         geo_accuracy: 8,
+         neighborhoods: [ 'Midtown', 'Fourth Ward', 'Montrose' ],
+         postal_code: '77002',
+         country_code: 'US',
+         address: [ '301 St. Josephs Parkway' ],
+         coordinate: { latitude: 29.754017, longitude: -95.375587 },
+         state_code: 'TX' }
+  }
+  __v: 0
+}
